@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="pt-br"> 
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Formulário de Inscrição</title>
+  <style>
+    
+    * { 
+      box-sizing: border-box; /* Inclui padding e bordas no tamanho total dos elementos */
+    }
+
+    body {
+      font-family: Arial, sans-serif; /* Define a fonte padrão */
+      background-color: blue; /* Cor de fundo da página */
+      margin: 0;
+      padding: 0;
+      display: flex; /* Usa Flexbox para centralizar o conteúdo */
+      justify-content: center; /* Centraliza horizontalmente */
+      align-items: center; /* Centraliza verticalmente */
+      height: 100vh;  /* Ocupa toda a altura da tela */
+    }
+
+   
+   .container {
+  width: 390px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  border: 3px solid #ff6600; /* Laranja institucional do SENAI */
+  box-shadow: 0 0 15px rgba(255, 102, 0, 0.4); /* brilho leve */
+}
+
+
+
+    h1 {
+      text-align: center; /* Centraliza o título */
+      color: blue; /* Cor do texto do título */
+      font-size: 25px;
+    }
+
+    
+    label {
+      display: block; /* Faz cada rótulo ocupar uma linha inteira */
+      margin-top: 10px; /* Espaço acima do rótulo */
+      font-weight: bold; /* Deixa o texto em negrito */
+    }
+
+    input, select, textarea {
+      width: 100%; /* Campos ocupam toda a largura do container */
+      padding: 8px; /* Espaçamento interno dos campos */
+      margin-top: 5px; /* Espaço entre o rótulo e o campo */
+      border: 1px solid #969696; /* Borda cinza dos campos */
+      border-radius: 5px; /* Bordas arredondadas */
+      font-size: 15px; /* Tamanho do texto dentro dos campos */
+    }
+
+    textarea { 
+      resize: none; /* Impede o usuário de redimensionar a caixa de texto */
+    }
+
+    
+    .botao {
+      display: inline-block; /* Permite definir altura/largura e alinhar */
+      background-color: blue; /* Cor de fundo do botão */
+      color: white; /* Cor do texto */
+      text-decoration: none; /* Remove sublinhado do texto */
+      border: none; /* Remove a borda padrão */
+      padding: 10px 20px; /* Espaçamento interno */
+      border-radius: 6px; /* Cantos arredondados */
+      font-size: 16px; /* Tamanho do texto */
+      width: 100%; /* Ocupa toda a largura */
+      cursor: pointer; /* Mostra o cursor de "mãozinha" */
+      transition: 0.3s; /* Suaviza o efeito de hover */
+      text-align: center; /* Centraliza o texto dentro do botão */
+    }
+
+    .botao:hover { 
+      background-color: #044777; /* Cor do botão quando passa o mouse */
+    }
+
+    .centralizar-link {
+      text-align: center; /* Centraliza o link horizontalmente */
+      margin-top: 15px;  /* Espaço acima do link */
+    }
+    .logo {
+  display: block;        /* Permite centralizar a imagem */
+  margin: 0 auto 10px;   /* Centraliza horizontalmente e adiciona espaço abaixo */
+  width: 120px;          /* Tamanho ajustado da logo */
+}
+
+
+  </style>
+</head>
+ <link rel="shortcut icon" href="logosenai.png" type="image/x-icon">
+
+<body>
+  
+
+  <div class="container"> <!-- Container que envolve todo o formulário -->
+    <img src="logosenai.png" alt="Logo SENAI" class="logo">
+    <h1>Faça sua Inscrição  </h1>
+
+    <!-- Formulário principal -->
+    <form action="pag02.html" method="get"> <!-- Envia os dados via URL para "pag02.html" -->
+      
+      <!-- Campo de nome -->
+      <label for="nome">Nome Completo:</label>
+      <input type="text" id="nome" name="nome" placeholder="Digite seu nome completo" required>
+
+      <!-- Campo de e-mail -->
+      <label for="email">E-mail:</label>
+      <input type="email" id="email" name="email" placeholder="exemplo@gmail.com" required>
+
+      <!-- Campo de telefone -->
+      <label for="telefone">Telefone:</label>
+      <input type="tel" id="telefone" name="telefone" placeholder="(00) 00000-0000" required>
+
+      <!-- Campo de seleção de curso -->
+      <select id="curso" name="curso" required>
+  <option value="">Selecione...</option>
+  <option value="adm">Técnico em Administração</option>
+  <option value="log">Técnico em Logística</option>
+  <option value="rh">Técnico em Recursos Humanos</option>
+  <option value="ds">Técnico em Desenvolvimento de Sistemas</option>
+  <option value="inf">Técnico em Informática</option>
+  <option value="enf">Técnico em Enfermagem</option>
+  <option value="seg">Técnico em Segurança do Trabalho</option>
+  <option value="ele">Técnico em Eletrotécnica</option>
+  <option value="mec">Técnico em Mecânica</option>
+  <option value="aut">Técnico em Automação Industrial</option>
+  <option value="edi">Técnico em Edificações</option>
+  <option value="eletronica">Técnico em Eletrônica</option>
+  <option value="me">Técnico em Mecatrônica</option>
+  <option value="qua">Técnico em Química</option>
+  <option value="ali">Técnico em Alimentos</option>
+  <option value="moda">Técnico em Produção de Moda</option>
+  <option value="agro">Técnico em Agropecuária</option>
+  <option value="amb">Técnico em Meio Ambiente</option>
+  <option value="info">Técnico em Informática para Internet</option>
+  <option value="desi">Técnico em Design Gráfico</option>
+  <option value="redes">Técnico em Redes de Computadores</option>
+  <option value="cont">Técnico em Contabilidade</option>
+  <option value="fin">Técnico em Finanças</option>
+  <option value="tur">Técnico em Turismo</option>
+  <option value="farm">Técnico em Farmácia</option>
+  <option value="radiologia">Técnico em Radiologia</option>
+  <option value="estetica">Técnico em Estética</option>
+  <option value="massoterapia">Técnico em Massoterapia</option>
+  <option value="transp">Técnico em Transporte e Logística</option>
+  <option value="solda">Técnico em Soldagem</option>
+  <option value="refrig">Técnico em Refrigeração e Climatização</option>
+  <option value="textil">Técnico em Têxtil</option>
+  <option value="plastica">Técnico em Plásticos</option>
+  <option value="mineracao">Técnico em Mineração</option>
+  <option value="petroleo">Técnico em Petróleo e Gás</option>
+</select>
+
+
+      <!-- Campo de observações -->
+      <label for="mensagem">Observações:</label>
+      <textarea id="mensagem" name="mensagem" rows="4" placeholder="Digite sua mensagem aqui..."></textarea>
+      <br><br>
+
+      <!-- Área dos botões -->
+      <div class="botoes">
+        <!-- Botão de envio -->
+        <button type="submit" class="botao">Enviar Inscrição</button>
+
+        <!-- Link centralizado abaixo do botão -->
+        <div class="centralizar-link">
+          <a href="pag03.html">Já Sou aluno!</a> <!-- Leva para outra página -->
+        </div>
+      </div>
+
+    </form>
+  </div>
+
+</body>
+</html>
